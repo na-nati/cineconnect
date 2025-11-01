@@ -1,12 +1,17 @@
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./component/Navbar";
 import Home from "./pages/Home";
+import Community from "./pages/Community";
 
 function App() {
   return (
-    <div className="min-h-screen bg-black text-gray-200">
+    <>
       <Navbar />
-      <Home />
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/community" element={<Community />} />
+      </Routes>
+    </>
   );
 }
 
